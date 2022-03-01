@@ -25,14 +25,14 @@ function Nav() {
     } else {
       return (
         <li className="flex-row" >
-          <li className="mx-1">
-            <Link to="/">
-              About Me
+           <li className="mx-3">
+            <Link to="/Items">
+              Shop Now
             </Link>
           </li>
           <li className="mx-1">
-            <Link to="/Items">
-              Items
+            <Link to="/">
+              About Me
             </Link>
           </li>
           <li className="mx-1">

@@ -161,7 +161,7 @@ input:focus {
   margin-right: var(--spacing-one);
   margin-left: var(--spacing-one);
   padding: 10px;
-  background-color: var(--light);
+  background-color: #6E557D;
   border-radius: 10px;
   text-align: center;
 }
@@ -169,6 +169,14 @@ input:focus {
 .mx-2 {
   margin-right: var(--spacing-two);
   margin-left: var(--spacing-two);
+}
+.mx-3 {
+  margin-right: var(--spacing-one);
+  margin-left: var(--spacing-one);
+  padding: 10px;
+  background-color: var(--light);
+  border-radius: 10px;
+  text-align: center;
 }
 
 .my-1 {
