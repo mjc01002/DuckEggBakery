@@ -1,8 +1,9 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
+  --primary: rgb(202, 232, 224);
+  --secondary: rgb(39, 57, 46);
+  --background: #7394B3;
   --tertiary: #B12704;
-  --light: #fafafa;
+  --light: #652496;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -70,7 +71,6 @@ p {
 }
 
 a {
-  color: var(--tertiary);
   text-decoration: none;
   font-weight: bold;
 }
@@ -80,11 +80,11 @@ a:hover {
 }
 
 header {
-  background: var(--primary);
+  background: var(--background);
 }
 
 header a {
-  color: var(--light);
+  color: #FFE9FF;
 }
 
 button {
@@ -96,7 +96,8 @@ button {
   outline: none;
   cursor: pointer;
   margin: 0 1px;
-  background-color: var(--secondary);
+  background-color: var(--light);
+  color: #FFE9FF;
 }
 
 button:hover {
@@ -130,7 +131,7 @@ input {
 }
 
 input:focus {
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--light);
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
@@ -143,7 +144,9 @@ input:focus {
 
 .flex-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
+  justify-content: start;
+  align-items: center;
 }
 
 .space-between {
@@ -157,6 +160,10 @@ input:focus {
 .mx-1 {
   margin-right: var(--spacing-one);
   margin-left: var(--spacing-one);
+  padding: 10px;
+  background-color: var(--light);
+  border-radius: 10px;
+  text-align: center;
 }
 
 .mx-2 {
@@ -207,4 +214,9 @@ input:focus {
   .card {
     width: 100%;
   }
+}
+
+ul, li { 
+  list-style-type: none; 
+  padding: 10px;
 }
