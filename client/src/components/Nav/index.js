@@ -9,7 +9,11 @@ function Nav() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          <li className="mx-3">
+            <Link to="/Items">
+              Shop Now !!!
+            </Link>
+          </li><li className="mx-1">
             <Link to="/orderHistory">
               Order History
             </Link>
@@ -27,7 +31,7 @@ function Nav() {
         <li className="flex-row" >
            <li className="mx-3">
             <Link to="/Items">
-              Shop Now
+              Shop Now !!!
             </Link>
           </li>
           <li className="mx-1">
@@ -52,12 +56,11 @@ function Nav() {
 
   return (
     <header className="flex-row">
-      <h1>    
+      <h1>  
         <Link to="/">
-        <img src={Logo} style={{ width: "8.5%" }} alt="test"/>
+        <img src={Logo} style={{ width: "12.5%" }} alt="test"/>
         </Link>
       </h1>
-     
       <nav>
         {showNavigation()}
       </nav>

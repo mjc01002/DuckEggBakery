@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
+import Logo from "../assets/color/logo.jpg"
 
 function OrderHistory() {
   const { data } = useQuery(QUERY_USER);
@@ -14,7 +15,7 @@ function OrderHistory() {
 
   return (
     <>
-      <div className="container my-1">
+      <div className="container my-1" style={{ backgroundImage: `url(${Logo})`, height: "1000px"}}>
         <Link to="/Items">← Back to Products</Link>
 
         {user ? (

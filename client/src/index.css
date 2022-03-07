@@ -1,7 +1,7 @@
 :root {
   --primary: rgb(202, 232, 224);
   --secondary: rgb(39, 57, 46);
-  --background: #7394B3;
+  --background: #85B1C3;
   --tertiary: #B12704;
   --light: #652496;
   --dark: #272f32;
@@ -68,11 +68,13 @@ h6 {
 p {
   font-size: 1.1rem;
   margin-top: 0;
+  color:#CAE8E0;
 }
 
 a {
   text-decoration: none;
   font-weight: bold;
+  color: var(--secondary);
 }
 
 a:hover {
@@ -85,6 +87,22 @@ header {
 
 header a {
   color: #FFE9FF;
+}
+.blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+.component blockquote.EN {
+  background:
+  linear-gradient(to right, #039be5 4px, transparent 4px) 0 100%,
+  linear-gradient(to left, #039be5 4px, transparent 4px) 100% 0,
+  linear-gradient(to bottom, #039be5 4px, transparent 4px) 100% 0,
+  linear-gradient(to top, #039be5 4px, transparent 4px) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
 }
 
 button {
@@ -142,11 +160,19 @@ input:focus {
   margin-right: auto;
 }
 
+.containerItems {
+  width: 85%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #7394B3;
+}
+
 .flex-row {
   display: flex;
   flex-wrap:wrap;
-  justify-content: start;
-  align-items: center;
+  justify-content: center;
+  align-items: normal;
 }
 
 .space-between {
@@ -161,7 +187,7 @@ input:focus {
   margin-right: var(--spacing-one);
   margin-left: var(--spacing-one);
   padding: 10px;
-  background-color: #6E557D;
+  background-color: var(--light);
   border-radius: 10px;
   text-align: center;
 }
@@ -192,6 +218,7 @@ input:focus {
 .px-1 {
   padding-right: var(--spacing-one);
   padding-left: var(--spacing-one);
+  color:#CAE8E0
 }
 
 .px-2 {
@@ -202,6 +229,7 @@ input:focus {
 .py-1 {
   padding-top: var(--spacing-one);
   padding-bottom: var(--spacing-one);
+  color:#CAE8E0
 }
 
 .py-2 {
@@ -211,7 +239,11 @@ input:focus {
 
 .card {
   width: 25%;
+  margin: 5px;
   text-align: center;
+  border:#545479;
+  border-style: solid;
+  vertical-align: bottom;
 }
 
 .error-text {

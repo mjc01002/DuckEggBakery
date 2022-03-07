@@ -47,7 +47,7 @@ db.once('open', async () => {
       category: categories[0]._id,
       description:
         'Option 1 for first birthday.',
-      image: 'Birthday.jpg',
+      image: 'Birthday1.jpg',
       price: 3.99,
       quantity: 50
     },
@@ -91,7 +91,7 @@ db.once('open', async () => {
       name: 'Uconn Cookies',
       category: categories[0]._id,
       description: 'After the boot camp is over celebrate with Uconn cookies.',
-      image: 'Uconn.HEIC',
+      image: 'Uconn.jpg',
       price: 1.99,
       quantity: 1000
     },

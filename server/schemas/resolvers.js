@@ -1,7 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
-const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
+const stripe = require('stripe')('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');
 
 const resolvers = {
   Query: {
@@ -71,6 +71,8 @@ const resolvers = {
           unit_amount: products[i].price * 100,
           currency: 'usd',
         });
+
+        
 
         line_items.push({
           price: price.id,
