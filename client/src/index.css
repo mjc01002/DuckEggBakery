@@ -166,6 +166,16 @@ input:focus {
   margin-left: auto;
   margin-right: auto;
   background-color: #7394B3;
+  align-items: center;
+}
+.containerItems h1{
+  color: #FFE9FF;
+}
+.centerslider {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: column-reverse;
+  align-items:center;
 }
 
 .flex-row {

@@ -25,20 +25,24 @@ const images = [
 const Home = () => {
   return (
     <div className="containerItems">
-      Duck Egg Bakery
+     <h1>Duck Egg Bakery</h1> 
       <div className="blockquote">My goal is to create beautiful cookies, cakes, and breads for any occasion you have.
-      </div> 
-      <div>Contact Information: Margaret Calkins
-        Email: mcalkins7613@gmail.com
+      <div>
+     <b class="term" >  Contact Information: Margaret Calkins
+      Email: mcalkins7613@gmail.com     
+      </b>
       </div>
+      </div> 
+     <div class="centerslider">
       <SimpleImageSlider
-        width={1000}
-        height={1000}
+        width={750}
+        height={750}
         images={images}
         slideDuration={0.5}
         autoPlay={true}
       />
       <Cart />
+      </div>
     </div>
   );
 };
