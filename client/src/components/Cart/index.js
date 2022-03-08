@@ -10,7 +10,7 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 
 require('dotenv').config();
-const stripePromise = loadStripe('pk_live_51KYbDeLy6UgjmXYo6t9P9l9GBNrqD9oquWKTnTl5EC4hiKgMZcPHvNIkTE88Q7Lycbyk5ZVBJfeNb6bSCbUA83qe005ndjaMtv');
+const stripePromise = loadStripe(process.env.PK_STRIPE_KEY);
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
@@ -19,7 +19,7 @@ const Cart = () => {
   useEffect(() => {
     if (data) {
       stripePromise.then((res) => {
-        res.redirectToCheckout({ sessionId: data.checkout.session.id });
+        res.redirectToCheckout({ sessionId: data.checkout.session });
       });
     }
   }, [data]);
