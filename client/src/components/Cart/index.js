@@ -18,8 +18,8 @@ const Cart = () => {
 
   useEffect(() => {
     if (data) {
-      stripePromise.then((req) => {
-        req.redirectToCheckout({ sessionId: data.checkout.session });
+      stripePromise.then((res) => {
+        res.redirectToCheckout({ sessionId: data.checkout.session });
       });
     }
   }, [data]);
@@ -95,9 +95,7 @@ const Cart = () => {
         </div>
       ) : (
         <h3>
-          <span role="img" aria-label="shocked">
-            😱
-          </span>
+          
           You haven't added anything to your cart yet!
         </h3>
       )}
