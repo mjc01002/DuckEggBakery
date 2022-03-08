@@ -15,8 +15,9 @@ const stripePromise = loadStripe('pk_live_51KYbDeLy6UgjmXYo6t9P9l9GBNrqD9oquWKTn
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-
+  
   useEffect(() => {
+    
     if (data) {
       stripePromise.then((res) => {
         res.redirectToCheckout({ sessionId: data.checkout.session });
@@ -47,7 +48,8 @@ const Cart = () => {
     return sum.toFixed(2);
   }
 
-  function submitCheckout() {
+  function submitCheckout(event) {
+    event.preventDefault();
     const productIds = [];
 
     state.cart.forEach((item) => {
