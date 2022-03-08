@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
 import Logo from "../assets/color/logo.jpg"
+import Cart from "../components/Cart";
 
 function OrderHistory() {
   const { data } = useQuery(QUERY_USER);
@@ -45,6 +46,8 @@ function OrderHistory() {
             ))}
           </>
         ) : null}
+
+      <Cart />
       </div>
     </>
   );
