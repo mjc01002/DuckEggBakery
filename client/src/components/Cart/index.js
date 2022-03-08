@@ -19,14 +19,10 @@ const Cart = () => {
   useEffect(() => {
     
     if (data) {
-      stripePromise.then((res) => {
+      stripePromise.then((res, session) => {
         res.redirectToCheckout({ sessionId: data.checkout.session });
       });
-    }  else {
-
-      console.log( 'No Session ID!');
-  
-  }
+    }  
   }, [data]);
 
   useEffect(() => {
