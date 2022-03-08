@@ -31,6 +31,9 @@ const Home = () => {
       Duck Egg Bakery
       <div className="blockquote">My goal is to create beautiful cookies, cakes, and breads for any occasion you have.
       </div> 
+      <div>Contact Information: Margaret Calkins
+        Email: mcalkins7613@gmail.com
+      </div>
       <SimpleImageSlider
         width={1000}
         height={1000}

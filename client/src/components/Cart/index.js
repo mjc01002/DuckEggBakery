@@ -9,7 +9,7 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 
-require('dotenv').config(); 
+require('dotenv').config({path:'../../.env'});
 const stripePromise = loadStripe(process.env.PK_STRIPE_KEY);
 
 const Cart = () => {
