@@ -22,7 +22,11 @@ const Cart = () => {
       stripePromise.then((res) => {
         res.redirectToCheckout({ sessionId: data.checkout.session });
       });
-    }
+    }  else {
+
+      console.log( 'No Session ID!');
+  
+  }
   }, [data]);
 
   useEffect(() => {
