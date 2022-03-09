@@ -3,7 +3,7 @@ const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 require('dotenv').config(); 
 
-const stripe = require('stripe')(process.env.SK_STRIPE_KEY);
+const stripe = require('stripe')('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');
 
 const resolvers = {
   Query: {
@@ -81,7 +81,7 @@ const resolvers = {
           quantity: 1
         });
       }
-
+      
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
         line_items,
